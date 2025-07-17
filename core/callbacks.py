@@ -1,6 +1,7 @@
 # core/callbacks.py
 
 import os
+import re
 import json
 import uuid
 import datetime
@@ -19,7 +20,7 @@ class FileCallbackHandler(BaseCallbackHandler):
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         query_part = re.sub(r'[\\/*?:"<>|]', "", query)[:50].replace(" ", "_")
         unique_id = uuid.uuid4().hex[:8]
-        filename = f"{timestamp}_{query_part}_{unique_id}.json"
+        filename = f"{timestamp}_{unique_id}.json"
         
         self.log_file_path = os.path.join(memory_path, filename)
         self.run_data = {"initial_query": query, "steps": []}
