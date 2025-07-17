@@ -1,0 +1,17 @@
+# --- Основные зависимости приложения ---
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+aiohttp
+
+# --- LangChain ---
+langchain==0.2.10
+langchain-core==0.2.22
+langchain-openai==0.1.17
+
+# --- Зависимости для разработки и тестирования ---
+pytest
+pytest-asyncio
+pytest-mock

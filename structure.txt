@@ -1,0 +1,19 @@
+LLM-Based-QA-Service/
+├── chains/                   <-- Новая директория для LCEL-цепочек
+│   ├── classifier.py
+│   └── qa_chain.py
+├── configs/
+│   └── prompts.json          <-- Без изменений
+├── core/
+│   ├── callbacks.py          <-- Новый файл для логирования
+│   ├── llm_clients.py        <-- Новый файл для инициализации LLM
+│   └── data_types.py         <-- Немного изменим
+├── data/
+│   └── memory/
+├── services/
+│   └── retriever.py          <-- Перепишем с использованием BaseRetriever
+├── tests/
+│   └── ...                   <-- Тесты нужно будет адаптировать
+├── .env
+├── main.py                   <-- Существенно упростится
+└── requirements.txt          <-- Обновятся зависимости
